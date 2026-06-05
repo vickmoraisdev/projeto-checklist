@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
     <title>CheckList</title>
 </head>
 <body>
-    
+    <header>
+        <a href="">← Voltar</a>
+        <h1>Compras da semana</h1>
+    </header>
+    <main>
+        <form>
+            <input type="text" id="item" placeholder="Adicione um novo item">
+            <button type="submit">Adicionar item</button>
+        </form>
+        <ul>
+            <li>
+                <input type="checkbox">
+                <span>Pão de forma</span>
+                <button type="button">
+                <i class="ph ph-trash"></i>
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Café preto</span>
+                <button type="button">
+                <i class="ph ph-trash"></i>
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Suco de laranja</span>
+                <button type="button">
+                <i class="ph ph-trash"></i>
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Biscoito</span>
+                <button type="button">
+                <i class="ph ph-trash"></i>
+                </button>
+            </li>
+        </ul>
+    </main>
+    <footer></footer>
 </body>
 </html>

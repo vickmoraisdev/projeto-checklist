@@ -3,7 +3,6 @@ const item = document.getElementById('item')
 const form = document.querySelector('form')
 const lista = document.querySelector('ul')
 const div = document.querySelector('div#alertID')
-const checkbox = document.getElementsByClassName('.checkbox')
 
 // Item adicionado, evento de submit(enviado)
 form.addEventListener('submit', (event) => {
@@ -46,9 +45,29 @@ function newLine(novaLinha) {
     lista.appendChild(novaLinha)
 }
 
-// Caso o botão de remover seja clicado
+// Verifica o clique na lista (ul)
 lista.addEventListener('click', (event) => {
 
+    checkboxChecked(event)
+    trashButton(event)
+})
+
+function checkboxChecked(event) {
+    // Se for marcado, aparece uma linha. Se desmarcar, a linha sai
+    if(event.target.type === 'checkbox'){
+        const checkbox = event.target
+        const li = event.target.parentElement
+        const text = li.querySelector('span')
+
+        if(checkbox.checked){
+            text.classList.add('concluido')
+        }else{
+            text.classList.remove('concluido')
+        }
+    }
+}
+
+function trashButton(event) {
     // O target descobre o alvo exato clicado
     const buttonClicked = event.target.closest('.botaoLixoX')
 
@@ -59,15 +78,13 @@ lista.addEventListener('click', (event) => {
         // Alerta aparece
         alertRed()
     }
-})
+}
 
 // Aparece o alerta e some depois de 3 segundos
 function alertRed() {
-    console.log('apareceu')
     div.classList.add('show-alert')
     
         setTimeout(() => {
-        console.log('sumiu')
         div.classList.remove('show-alert')
     }, 3000);
 }
@@ -81,4 +98,3 @@ div.addEventListener('click', (event) => {
     }
     
 })
-

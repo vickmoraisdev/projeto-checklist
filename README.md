@@ -10,6 +10,7 @@ Acesse o projeto online:
 
 ## 📸 Preview
 
+![Preview do projeto](https://github.com/user-attachments/assets/ca9cf766-6bb1-4dc6-8e8f-c4b991f16a42)
 
 ## ✨ Funcionalidades
 

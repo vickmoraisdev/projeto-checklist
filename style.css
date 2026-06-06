@@ -125,14 +125,13 @@ div#alertID{
     border-radius: 10px;
     padding: 0.5rem;
 
-    display: flex;
     justify-content: space-between;
     align-items: center;
     display: none;
 }
 
-.alert{ /*Vou colocar uma classe pelo JS para aparecer a mensagem*/
-    display: block;
+#alertID.show-alert{
+    display: flex;
 }
 
 #xis{

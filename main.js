@@ -2,6 +2,8 @@
 const item = document.getElementById('item')
 const form = document.querySelector('form')
 const lista = document.querySelector('ul')
+const div = document.querySelector('div#alertID')
+const checkbox = document.getElementsByClassName('.checkbox')
 
 // Item adicionado, evento de submit(enviado)
 form.addEventListener('submit', (event) => {
@@ -43,3 +45,40 @@ function newLine(novaLinha) {
 
     lista.appendChild(novaLinha)
 }
+
+// Caso o botão de remover seja clicado
+lista.addEventListener('click', (event) => {
+
+    // O target descobre o alvo exato clicado
+    const buttonClicked = event.target.closest('.botaoLixoX')
+
+    // Remove o item
+    if(buttonClicked){
+        buttonClicked.parentElement.remove()
+
+        // Alerta aparece
+        alertRed()
+    }
+})
+
+// Aparece o alerta e some depois de 3 segundos
+function alertRed() {
+    console.log('apareceu')
+    div.classList.add('show-alert')
+    
+        setTimeout(() => {
+        console.log('sumiu')
+        div.classList.remove('show-alert')
+    }, 3000);
+}
+
+// Remove o alerta quando clica no X
+div.addEventListener('click', (event) => {
+    const buttonClicked = event.target.closest('#xis')
+
+    if(buttonClicked){
+        div.classList.remove('show-alert')
+    }
+    
+})
+

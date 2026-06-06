@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-rosaNoHover: #CA3884;
+    --cor-rosaHover: #A52C6B;
+    --cor-bordaPrimaria: #D1D5DB;
+    --cor-bordaHover: #B9C2D0;
+    --cor-letraLista: #374151;
+    --cor-alerta: #C93847;
+    --fonte: "Inter", sans-serif;
+}
+
+body{
+    background-color: #F4F5FB;
+    font-family: var(--fonte);
+    padding: 1.5rem;
+}
+
+.container{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header{
+    margin-top: 0.5rem;
+}
+
+header p{
+    text-align: center;
+    font-weight: bolder;
+    color: var(--cor-letraLista);
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-rosaNoHover);
+    font-size: .875rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+a:hover{
+    color: var(--cor-rosaHover);
+}
+
+form{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+input#item{
+    flex: 1;
+    border: 2px solid var(--cor-bordaPrimaria);
+    border-radius: 10px;
+    padding: .9rem;
+    font-size: 1rem;
+}
+
+input#item:hover{
+    border-color: var(--cor-bordaHover);
+}
+
+.addItem{
+    width: 180px;
+    border: none;
+    border-radius: 10px;
+    background: var(--cor-rosaNoHover);
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.addItem:hover{
+    background: var(--cor-rosaHover);
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: .75rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--cor-letraLista);
+}
+
+.botaoLixoX{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.botaoLixoX:hover{
+    color: red;
+}
+
+
+.alert{
+    margin-top: 2rem;
+    background: var(--cor-alerta);
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#xis{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+#xis:hover{
+    color: rgb(124, 7, 7);
+}
+
+
+@media (max-width: 600px){
+
+    body{
+        padding: 1rem;
+    }
+
+    header{
+        margin-top: 2rem;
+    }
+
+    h1{
+        font-size: 1.75rem;
+    }
+
+    form{
+        flex-direction: column;
+    }
+
+    .addItem{
+        width: 100%;
+        height: 40px;
+    }
+
+    li{
+        padding: .875rem;
+    }
+
+    .alert{
+        padding: .875rem;
+        height: 30px;
+    }
+}

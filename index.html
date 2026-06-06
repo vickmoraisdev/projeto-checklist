@@ -8,46 +8,56 @@
     <title>CheckList</title>
 </head>
 <body>
-    <header>
-        <a href="">← Voltar</a>
-        <h1>Compras da semana</h1>
-    </header>
-    <main>
-        <form>
-            <input type="text" id="item" placeholder="Adicione um novo item">
-            <button type="submit">Adicionar item</button>
-        </form>
-        <ul>
-            <li>
-                <input type="checkbox">
-                <span>Pão de forma</span>
-                <button type="button">
-                <i class="ph ph-trash"></i>
+    <div class="container">
+        <header>
+            <p>quicklist ✅ </p>
+            <a href="">← Voltar</a>
+            <h1>Compras da semana</h1>
+        </header>
+        <main>
+            <form>
+                <input type="text" id="item" placeholder="Adicione um novo item">
+                <button type="submit" class="addItem">Adicionar item</button>
+            </form>
+            <ul>
+                <li>
+                    <input type="checkbox">
+                    <span>Pão de forma</span>
+                    <button type="button" class="botaoLixoX">
+                    <i class="ph ph-trash"></i>
+                    </button>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>Café preto</span>
+                    <button type="button" class="botaoLixoX">
+                    <i class="ph ph-trash"></i>
+                    </button>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>Suco de laranja</span>
+                    <button type="button" class="botaoLixoX">
+                    <i class="ph ph-trash"></i>
+                    </button>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>Biscoito</span>
+                    <button type="button" class="botaoLixoX">
+                    <i class="ph ph-trash"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="alert">
+                <i class="ph ph-warning-circle"></i>
+                <span>O item foi removido da lista</span>
+                <button type="button" class="botaoLixoX" id="xis">
+                    <i class="ph ph-x"></i>
                 </button>
-            </li>
-            <li>
-                <input type="checkbox">
-                <span>Café preto</span>
-                <button type="button">
-                <i class="ph ph-trash"></i>
-                </button>
-            </li>
-            <li>
-                <input type="checkbox">
-                <span>Suco de laranja</span>
-                <button type="button">
-                <i class="ph ph-trash"></i>
-                </button>
-            </li>
-            <li>
-                <input type="checkbox">
-                <span>Biscoito</span>
-                <button type="button">
-                <i class="ph ph-trash"></i>
-                </button>
-            </li>
-        </ul>
-    </main>
+            </div>
+        </main>
+    </div>
     <footer></footer>
 </body>
 </html>

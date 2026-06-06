@@ -118,7 +118,7 @@ li{
 }
 
 
-.alert{
+div#alertID{
     margin-top: 2rem;
     background: var(--cor-alerta);
     color: white;
@@ -128,8 +128,12 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
+.alert{ /*Vou colocar uma classe pelo JS para aparecer a mensagem*/
+    display: block;
+}
 
 #xis{
     background: transparent;
